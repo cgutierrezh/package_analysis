@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from wkhtmltopdf.views import PDFTemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('pdf/', PDFTemplateView.as_view(
+        template_name='my_template.html', filename='my_pdf.pdf'), name='pdf'),
 ]
