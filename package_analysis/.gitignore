@@ -1,0 +1,4 @@
+*.pyc
+/static/
+/.idea/
+db.sqlite3
